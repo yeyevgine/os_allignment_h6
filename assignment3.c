@@ -5,18 +5,21 @@ struct s {
 	int b;
 	double c;
 };
+
 #pragma pack(1)
 struct packed_s1 {
         char a;
         int b;
         double c;
 };
+
 #pragma pack(2)
 struct packed_s2 {
         char a;
         int b;
         double c;
 };
+
 #pragma pack(4)
 struct packed_s3 {
         char a;
@@ -25,7 +28,8 @@ struct packed_s3 {
 };
 
 int main ()
-{	struct s s1;
+{	
+	struct s s1;
 	struct packed_s1 s2;
 	struct packed_s2 s3;
 	struct packed_s3 s4;
@@ -45,7 +49,7 @@ int main ()
         printf("Adress of b: %p\n", &s3.b);
         printf("Adress of c: %p\n", &s3.c);
 
-	printf("\nThe size of struct 4, #pragma pack(4): %zu bytes \n", sizeof(s4));
+		printf("\nThe size of struct 4, #pragma pack(4): %zu bytes \n", sizeof(s4));
         printf("Adress of a: %p\n", &s4.a);
         printf("Adress of b: %p\n", &s4.b);
         printf("Adress of c: %p\n", &s4.c);
